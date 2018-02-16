@@ -1,22 +1,20 @@
 $(document).ready(function() {
-    var submitButton = $("#stackSubmit");
+    var submitButton = $("#getJokeButton");
     console.log(submitButton);
-     $("#stackSubmit").click(function(e) {
+     $("#getJokeButton").click(function(e) {
         e.preventDefault();
-        var value = $("#stackInput").val();
-        console.log(value);
-         var myurl= "" + value;
+         var myurl= "https://08ad1pao69.execute-api.us-east-1.amazonaws.com/dev/random_joke";
         $.ajax({
          url : myurl,
          dataType : "json",
          success : function(json) {
-            console.log(json);
-               var images = document.body.getElementsByTagName("img");
-                  var image = images[0];
-                    var o = JSON.stringify(json);
-                    var text = document.createTextNode(o);
-                    image.parentNode.replaceChild(text, image);
-
+              console.log(json);
+              document.getElementById("prompt").innerHTML = "Ha ha! Want to hear another?";
+              var setup = json.setup;
+              var punchline = json.punchline;
+              document.getElementById("setup").innerHTML = setup;
+              document.getElementById("punchline").innerHTML = punchline;
+              document.getElementById("pic").innerHTML = '<img src="laughing.jpg">';
             }
         });
     });
