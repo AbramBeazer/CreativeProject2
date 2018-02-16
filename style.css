@@ -1,0 +1,151 @@
+
+.grid {
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: 11% 4% 5% 5%;
+  grid-template-areas:
+    "banner-bg logo banner-bg2"
+    "banner-bg navbar banner-bg2"
+    "banner-bg main_page banner-bg2"
+    "footer footer footer";
+  width: 100%;
+  height: 100%;
+}
+
+.banner-bg {
+    grid-area: banner-bg;
+    background-color: green;
+}
+
+.banner-bg2 {
+    grid-area: banner-bg2;
+    background-color: green;
+}
+
+.logo {
+    grid-area: logo;
+    text-align: center;
+    color: palegoldenrod;
+    background-image: url(images/woods.jpg);
+    font-family: fantasy;
+    font-size: 20pt;
+}
+
+.navbar {
+    grid-area: navbar;
+}
+
+.main_page {
+    grid-area: main_page;
+    background-color: aliceblue;
+    min-height: 100%;
+}
+
+.main_page p {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.main_page h1 {
+    text-align: center;
+}
+
+.contact_main_page{
+    grid-area: main_page;
+    background-color: aliceblue;
+    min-height: 80%;
+}
+
+.contact_main_page p {
+    text-align: center;
+    margin-bottom: 20px;
+     width: 100%;
+    height: auto;
+}
+
+.contact_main_page form {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 400px;
+}
+
+
+.comic_main_page p {
+    text-align: center;
+    margin-bottom: 20px;
+     width: 100%;
+    height: auto;
+}
+
+.comic_main_page{
+    grid-area: main_page;
+    background-color: aliceblue;
+    min-height: 80%;
+}
+
+.comic_main_page p img {
+    width: 90%;
+    height: 90%;
+    align-self: center;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: skyblue;
+    text-align: center;
+    height:auto;
+    width:100%;
+    padding: 3px 0;
+}
+
+
+
+
+nav {
+
+}
+
+nav ul {
+    list-style-type: none;
+    list-style: none;
+    margin: 0 auto;
+    width: inherit;
+    overflow: hidden;
+    background-color: #333;
+    padding:0;
+}
+
+nav li {
+    float:left;
+    display:inline-block;
+    width: 25%;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20pt;
+    font-family:fantasy;
+    color: palegoldenrod;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav li a:hover {
+    background-color: palegoldenrod;
+    color:black;
+}
+
+nav .active {
+    background-color: #4CAF50;
+}
+
+body {
+    margin:0;
+    height:100%;
+}
